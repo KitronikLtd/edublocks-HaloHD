@@ -9,7 +9,7 @@ Blockly.Blocks['import_neopixel'] = {
       this.setHelpUrl("");
     }
 };
-Blockly.Blocks['init_neopixel'] = {
+Blockly.Blocks['neopixel_init'] = {
     init: function() {
       this.appendDummyInput()
           .appendField("initialise neopixel");
