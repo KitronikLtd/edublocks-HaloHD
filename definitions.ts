@@ -1,59 +1,47 @@
-Blockly.Blocks['import_move_motor'] = {
+Blockly.Blocks['import_neopixel'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("from KitronikMOVEMotor import *");
+          .appendField("import neopixel");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#02AD4D");
-      this.setTooltip("Imports Kitronik :MOVE Motor library");
+      this.setTooltip("Imports neopixel");
       this.setHelpUrl("");
     }
 };
 
-Blockly.Blocks['move_motor_init'] = {
+Blockly.Blocks['set_led'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("buggy"), "buggy")
-        .appendField(" = MoveMotor()");
+        .appendField("set led number, colour")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-  this.setTooltip("Initialise Kitronik :MOVE Motor");
+  this.setTooltip("set (number) led (colour)");
   this.setHelpUrl("");
   }
 };
 
-Blockly.Blocks['move_motor_direction'] = {
-  init: function() {
+Blockly.Blocks['set_all_leds'] = {
+    init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("buggy"), "buggy")
-        .appendField(".")
-        .appendField(new Blockly.FieldDropdown([["left", "LeftMotor"], ["right", "RightMotor"]]), "motor_side")
-        .appendField(" motor(")
-        .appendField(new Blockly.FieldDropdown([["foward", "foward"], ["backward", "backward"]]), "motor_direction")
-        .appendField(",");
-    this.appendValueInput("motor_speed")
-        .setCheck(null);
-    this.appendDummyInput()
-        .appendField(")");
-    this.setInputsInline(true);
+        .appendField("set all led colour")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-  this.setTooltip("Drive the :MOVE's left motor");
+  this.setTooltip("set all led colour");
   this.setHelpUrl("");
   }
 };
 
-Blockly.Blocks['move_motor_stop'] = {
+Blockly.Blocks['show_leds'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("buggy"), "buggy")
-        .appendField(".stop motors()");
+        .appendField("show the leds set values")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-  this.setTooltip("Stop the :MOVE's motors");
+  this.setTooltip("show the set leds");
   this.setHelpUrl("");
   }
 };
