@@ -3,17 +3,18 @@
  <block type="import_neopixel"></block>
  <block type="neopixel_init"></block>
  <block type="set_led">
-    <value name="Colour">
+    <value name="Pixel">
         <shadow type="textinline">
         <field name="text">255</field>
     </shadow>
     </value>
  </block>
- <block type="set_all_leds"></block>
+ <block type="set_all_leds">
     <value name="Colour">
         <shadow type="textinline">
         <field name="text">255</field>
     </shadow>
     </value>
+  </block>
  <block type="show_leds"></block>
 </category>
