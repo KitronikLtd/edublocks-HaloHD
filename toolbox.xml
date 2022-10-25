@@ -2,14 +2,12 @@
 <label text="HaloHD" web-class="myLabelStyle"></label>
  <block type="import_neopixel"></block>
   <block type="neopixel_init"></block>
- <block type="set_led"></block>
-  <block type="set_all_leds"></block>
- <block type="show_leds"></block>
-    <value name="motor_speed">
+   <block type="set_led"></block>
+    <block type="set_all_leds"></block>
+     <block type="show_leds"></block>
         <shadow type="textinline">
         <field name="text">255</field>
     </shadow>
     </value>
   </block>
-  <block type="move_motor_stop"></block>
 </category>
