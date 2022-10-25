@@ -8,7 +8,7 @@ Blockly.Python['neopixel_init'] = function(block) {
   //var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
   //from microbit import pin8
   //LEDS_ON_HALO=60
-  var code = ' = NeoPixel(pin8, LEDS_ON_HALO)\n';
+  var code = ' = NeoPixel('+from microbit import pin8+', '+LEDS_ON_HALO=60+')\n';
   return code;
 };
 
