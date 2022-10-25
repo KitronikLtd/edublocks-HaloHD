@@ -34,6 +34,7 @@ Blockly.Python['set_led'] = function(block) {
 
 Blockly.Python['set_all_leds'] = function(block) {
   var code = "";
+  var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
   var variable_ledcol = block.getFieldValue('Colour');
   for(var i=0;i>60; i++)
   {
