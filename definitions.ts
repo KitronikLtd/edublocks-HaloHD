@@ -26,13 +26,13 @@ Blockly.Blocks['set_led'] = {
     this.appendDummyInput()
         .appendField(new Blockly.FieldVariable("Pixels"), "Pixels")
         .appendField(".")
-    //this.appendValueInput("Pixel")
-        .appendField(new Blockly.FieldDropdown([["red", "red"], ["green", "green"], ["blue", "blue"]]), "Colour") 
-        .appendField(".SetL( ")
     this.appendValueInput("Pixel")
         .setCheck(null)
     this.appendDummyInput()
-        .appendField(" )");
+    //this.appendValueInput("Pixel")
+        .appendField(new Blockly.FieldDropdown([["red", "red"], ["green", "green"], ["blue", "blue"]]), "Colour") 
+        .appendField(".SetL() ")    
+        //.appendField(" )");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
