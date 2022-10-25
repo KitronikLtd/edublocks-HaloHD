@@ -51,7 +51,7 @@ Blockly.Blocks['set_all_leds'] = {
 Blockly.Blocks['show_leds'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("show the leds set values")
+        .appendField("showLeds()")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
