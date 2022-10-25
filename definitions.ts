@@ -30,7 +30,8 @@ Blockly.Blocks['set_led'] = {
         .appendField(new Blockly.FieldDropdown([["red", "red"], ["green", "green"], ["blue", "blue"]]), "Colour") 
         .appendField(".SetL( ")
     this.appendValueInput("Pixel")
-      .appendField(" )");
+        .setCheck(null)
+        .appendField(" )");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
