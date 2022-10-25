@@ -15,6 +15,7 @@ Blockly.Python['neopixel_init'] = function(block) {
 
 Blockly.Python['set_led'] = function(block) {
   var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
+  var variable_lednum = Blockly.Python.valueToCode(block, 'Pixel', Blockly.Python.ORDER_ATOMIC);
   var variable_ledcol = block.getFieldValue('Colour');
   if (variable_ledcol == 'red')
   {
@@ -28,7 +29,6 @@ Blockly.Python['set_led'] = function(block) {
   {
     var code = variable_led + '['+variable_lednum+'] = (0, 0, 255)\n';
   }  
-  var variable_lednum = Blockly.Python.valueToCode(block, 'Pixel', Blockly.Python.ORDER_ATOMIC);
   return code;
 };
 
