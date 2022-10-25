@@ -13,7 +13,7 @@ Blockly.Blocks['neopixel_init'] = {
     init: function() {
       this.appendDummyInput()
           .appendField("Create")
-          .appendField(new Blockly.FieldVariable("Pixel"), "Pixel");
+          .appendField(new Blockly.FieldVariable("Pixels"), "Pixels");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#02AD4D");
@@ -24,11 +24,11 @@ Blockly.Blocks['neopixel_init'] = {
 Blockly.Blocks['set_led'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("Pixel"), "Pixel")
+        .appendField(new Blockly.FieldVariable("Pixels"), "Pixels")
         .appendField(".")
-        .appendField(new Blockly.FieldDropdown([["red", "red"], ["green", "green"], ["blue", "blue"]]), "Colour")
     this.appendValueInput("Pixel")
-        .appendField(" = SetL()");
+        .appendField(new Blockly.FieldDropdown([["red", "red"], ["green", "green"], ["blue", "blue"]]), "Colour") 
+        .appendField(".SetL()");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
