@@ -1,12 +1,12 @@
 Blockly.Python['import_neopixel'] = function(block) {
-  var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
+  //var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
   var code = 'from neopixel import NeoPixel\n';
   return code;
 };
 
 Blockly.Python['neopixel_init'] = function(block) {
-  var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
-  var code = variable_led + ' = NeoPixel(pin8, LEDS_ON_HALO)\n';
+  //var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
+  var code = ' = NeoPixel(pin8, LEDS_ON_HALO)\n';
   return code;
 };
 
