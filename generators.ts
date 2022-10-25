@@ -44,21 +44,18 @@ Blockly.Python['set_all_leds'] = function(block) {
   var code = "";
   var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
   var variable_ledcol = block.getFieldValue('Colour');
-  for(var i=0;i>60; i++)
-  {
-    if (variable_ledcol == 'red')
+  if (variable_ledcol == 'red')
     {
-      code += variable_led + '['+i+'] = (255, 0, 0)\n';
+      code += variable_led + ' = (255, 0, 0)\n';
     }
     else if (variable_ledcol == 'green')
     {
-      code += variable_led + '['+i+'] = (0, 255, 0)\n';
+      code += variable_led + ' = (0, 255, 0)\n';
     }
     else if (variable_ledcol == 'blue')
     {
-      code += variable_led + '['+i+'] = (0, 0, 255)\n';
+      code += variable_led + ' = (0, 0, 255)\n';
     }
-  }
   return code;
 };
 
