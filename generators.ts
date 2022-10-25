@@ -55,7 +55,9 @@ Blockly.Python['set_all_leds'] = function(block) {
 };
 
 Blockly.Python['show_leds'] = function(block) {
-  //var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
-  var code = '.show()\n';
+  var code = "";
+  var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
+  code += variable_led;
+  code += '.show()\n';
   return code;
 };
