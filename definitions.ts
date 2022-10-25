@@ -40,7 +40,7 @@ Blockly.Blocks['set_led'] = {
 Blockly.Blocks['set_all_leds'] = {
     init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("Pixel"), "Pixel")
+        .appendField(new Blockly.FieldVariable("Pixels"), "Pixels")
         .appendField(".all")
         .appendField(new Blockly.FieldDropdown([["red", "red"], ["green", "green"], ["blue", "blue"]]), "Colour")
         .appendField(" = SetL()");
