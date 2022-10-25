@@ -23,8 +23,8 @@ Blockly.Blocks['neopixel_init'] = {
 Blockly.Blocks['set_led'] = {
   init: function() {
     this.appendDummyInput()
-        //.appendField(new Blockly.FieldVariable("Pixel"), "Pixel")
-        //.appendField(".");
+        .appendField(new Blockly.FieldVariable("Pixel"), "Pixel")
+        .appendField(".");
         .appendField(new Blockly.FieldDropdown([["red", "red"], ["green", "green"], ["blue", "blue"]]), "Colour")
     this.appendValueInput("Pixel")
         .appendField(" = SetL()");
