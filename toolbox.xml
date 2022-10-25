@@ -10,5 +10,10 @@
     </value>
  </block>
  <block type="set_all_leds"></block>
+    <value name="Colour">
+        <shadow type="textinline">
+        <field name="text">255</field>
+    </shadow>
+    </value>
  <block type="show_leds"></block>
 </category>
