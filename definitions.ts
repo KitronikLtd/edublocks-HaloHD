@@ -1,22 +1,22 @@
 Blockly.Blocks['import_neopixel'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("import neopixel");
+          .appendField("import neoPixel");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#02AD4D");
-      this.setTooltip("Imports neopixel");
+      this.setTooltip("imports neopixel libary");
       this.setHelpUrl("");
     }
 };
 Blockly.Blocks['neopixel_init'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("initialise neopixel");
+          .appendField("Create a neopixel instance");
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#02AD4D");
-      this.setTooltip("initialises neopixel");
+      this.setTooltip("Initialise : neoPixel");
       this.setHelpUrl("");
     }
 };
@@ -35,11 +35,11 @@ Blockly.Blocks['set_led'] = {
 Blockly.Blocks['set_all_leds'] = {
     init: function() {
     this.appendDummyInput()
-        .appendField("set all led colour")
+        .appendField("sets all led colour values")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-  this.setTooltip("set all led colour");
+  this.setTooltip("sets all led colour");
   this.setHelpUrl("");
   }
 };
