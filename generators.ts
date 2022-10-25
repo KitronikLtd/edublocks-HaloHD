@@ -6,7 +6,7 @@ Blockly.Python['import_neopixel'] = function(block) {
 
 Blockly.Python['neopixel_init'] = function(block) {
   //var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
-  var variable_led = Blockly.Python.valueToCode(block, 'Pixel', Blockly.Python.ORDER_ATOMIC);
+  var variable_led = Blockly.Python.valueToCode(block, 'Pixels', Blockly.Python.ORDER_ATOMIC);
   var code = 'from microbit import pin8\n'
   code += 'LEDS_ON_HALO=60\n'
   code += variable_led + ' = NeoPixel(pin8, LEDS_ON_HALO\n;
@@ -14,9 +14,9 @@ Blockly.Python['neopixel_init'] = function(block) {
 };
 
 Blockly.Python['set_led'] = function(block) {
-  //var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
-  var variable_ledcol = block.getFieldValue('Colour');
+  var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
   var variable_lednum = Blockly.Python.valueToCode(block, 'Pixel', Blockly.Python.ORDER_ATOMIC);
+  var variable_ledcol = block.getFieldValue('Colour');
   if (variable_ledcol == 'red')
   {
     var code = variable_led + '['+variable_lednum+'] = (255, 0, 0)\n';
@@ -28,7 +28,7 @@ Blockly.Python['set_led'] = function(block) {
   else if (variable_ledcol == 'blue')
   {
     var code = variable_led + '['+variable_lednum+'] = (0, 0, 255)\n';
-  }
+  }  
   return code;
 };
 
