@@ -3,6 +3,7 @@ Blockly.Python['import_neopixel'] = function(block) {
   var code = 'from neopixel import NeoPixel\n';
   return code;
 };
+
 Blockly.Python['neopixel_init'] = function(block) {
   var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
   var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
@@ -50,7 +51,6 @@ Blockly.Python['set_all_leds'] = function(block) {
   }
   return code;
 };
-
 
 Blockly.Python['show_leds'] = function(block) {
   var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
