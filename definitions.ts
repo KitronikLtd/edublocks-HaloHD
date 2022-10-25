@@ -12,7 +12,8 @@ Blockly.Blocks['import_neopixel'] = {
 Blockly.Blocks['neopixel_init'] = {
     init: function() {
       this.appendDummyInput()
-          .appendField("Create a neopixel instance");
+        .appendField("Create");
+          .appendField(new Blockly.FieldVariable("Pixel"), "Pixel")
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour("#02AD4D");
