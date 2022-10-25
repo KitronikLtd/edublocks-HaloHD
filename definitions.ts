@@ -26,7 +26,7 @@ Blockly.Blocks['set_led'] = {
     this.appendDummyInput()
         .appendField(new Blockly.FieldVariable("Pixels"), "Pixels")
         .appendField(".");
-    this.appendValueInput("Pixel");
+    this.appendValueInput("Pixel")
         .setCheck(null);
     this.appendDummyInput()
         .appendField(".")
