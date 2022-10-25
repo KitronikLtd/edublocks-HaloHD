@@ -20,7 +20,7 @@ Blockly.Python['set_led'] = function(block) {
   {
     variable_lednum=0;
   }
-  elif (variable_lednum > 59)
+  else if (variable_lednum > 59)
   {
     variable_lednum=59;
   }
