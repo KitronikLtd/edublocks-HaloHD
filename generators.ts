@@ -41,8 +41,7 @@ Blockly.Python['set_led'] = function(block) {
 };
 
 Blockly.Python['set_all_leds'] = function(block) {
-  var code = "for i in range(60)\n"; 
-  var code += "{\n";
+  var code = "for i in range(60):\n{\n"; 
   var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
   var variable_ledcol = block.getFieldValue('Colour');
   if (variable_ledcol == 'red')
@@ -57,7 +56,7 @@ Blockly.Python['set_all_leds'] = function(block) {
     {
       code += '     ' + variable_led + '[i] = (0, 0, 255)\n';
     }
-  code +="}\n";
+  code += "}\n";
   return code;
 };
 
