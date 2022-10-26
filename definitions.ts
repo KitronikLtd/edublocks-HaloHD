@@ -59,6 +59,8 @@ Blockly.Blocks['set_all_leds'] = {
 Blockly.Blocks['show_leds'] = {
   init: function() {
     this.appendDummyInput()
+        .appendField(new Blockly.FieldVariable("Pixels"), "Pixels")
+        .appendField(".")
         .appendField("showLeds()")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
