@@ -10,7 +10,7 @@ Blockly.Python['neopixel_init'] = function(block) {
   var code = 'from microbit import pin8\n';
   code += 'LEDS_ON_HALO=60\n';
   code += 'Neopixel(pin8, LEDS_ON_HALO)\n';
-  code += variable_led + ' = Neopixel();';
+  code += variable_led + ' = Neopixel()\n';
   return code;
 };
 
