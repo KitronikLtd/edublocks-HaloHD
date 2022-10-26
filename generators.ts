@@ -46,15 +46,15 @@ Blockly.Python['set_all_leds'] = function(block) {
   var variable_ledcol = block.getFieldValue('Colour');
   if (variable_ledcol == 'red')
     {
-      code += '     ' + variable_led + '[i] = (255, 0, 0)\n';
+      code += '  ' + variable_led + '[i] = (255, 0, 0)\n';
     }
     else if (variable_ledcol == 'green')
     {
-      code += '     ' + variable_led + '[i] = (0, 255, 0)\n';
+      code += '  ' + variable_led + '[i] = (0, 255, 0)\n';
     }
     else if (variable_ledcol == 'blue')
     {
-      code += '     ' + variable_led + '[i] = (0, 0, 255)\n';
+      code += '  ' + variable_led + '[i] = (0, 0, 255)\n';
     }
   code += "}\n";
   return code;
