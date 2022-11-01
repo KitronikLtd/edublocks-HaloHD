@@ -96,3 +96,76 @@ Blockly.Blocks['halo_hd_clear_leds'] = {
     this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['halo_hd_read_time'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".readTime()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_set_time'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".setTime(");
+    this.appendValueInput("time_hours")
+      .setCheck(null);
+    this.appendValueInput("time_minutes")
+      .setCheck(null);
+    this.appendValueInput("time_seconds")
+      .setCheck(null);
+    this.appendDummyInput()
+      .appendField(")");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_read_hours'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".readHours()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_read_minutes'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".readMinutes()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_read_seconds'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".readSeconds()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};

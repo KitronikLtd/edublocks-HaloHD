@@ -41,6 +41,7 @@ setAlarm = False
 class HaloHD():
     def __init__(self):
         self.pixels = NeoPixel(pin8, LEDS_ON_HALO)
+        self.initRTC()
     
     def setLED(self, ledNumber, colour):
         if ledNumber < 0: ledNumber = 0
@@ -76,19 +77,19 @@ class HaloHD():
 
     #This actually pokes the time values into the RTC chip.
     #It converts the decimal values to BCD for the RTC chip
-    def setTime(self, setHours, setMinutes, setSeconds):
+    def setTime(self, hours, minutes, seconds):
         writeBuf = bytearray(2)
         writeBuf[0] = self.RTC_SECONDS_REG
         writeBuf[1] = self.STOP_RTC
         i2c.write(self.CHIP_ADDRESS, writeBuf, False)
         writeBuf[0] = self.RTC_HOURS_REG
-        writeBuf[1] = (int(setHours / 10) << 4) | int(setHours % 10)
+        writeBuf[1] = (int(hours / 10) << 4) | int(hours % 10)
         i2c.write(self.CHIP_ADDRESS, writeBuf, False)
         writeBuf[0] = self.RTC_MINUTES_REG
-        writeBuf[1] =  (int(setMinutes / 10) << 4) | int(setMinutes % 10)
+        writeBuf[1] =  (int(minutes / 10) << 4) | int(minutes % 10)
         i2c.write(self.CHIP_ADDRESS, writeBuf, False)
         writeBuf[0] = self.RTC_SECONDS_REG
-        writeBuf[1] = self.START_RTC |  (int(setSeconds / 10) << 4) | int(setSeconds % 10) 
+        writeBuf[1] = self.START_RTC |  (int(seconds / 10) << 4) | int(seconds % 10) 
         i2c.write(self.CHIP_ADDRESS, writeBuf, False)
     
     # These read functions only return the last read values.

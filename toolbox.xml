@@ -43,4 +43,25 @@
  </block>  
  <block type="halo_hd_show_leds"></block>
  <block type="halo_hd_clear_leds"></block>
+ <block type="halo_hd_read_time"></block>
+ <block type="halo_hd_set_time">
+    <value name="time_hours">
+        <shadow type="textinline">
+            <field name="text">12</field>
+        </shadow>
+    </value>
+    <value name="time_minutes">
+        <shadow type="textinline">
+            <field name="text">15</field>
+        </shadow>
+    </value>
+    <value name="time_seconds">
+        <shadow type="textinline">
+            <field name="text">30</field>
+        </shadow>
+    </value>
+ </block>
+ <block type="halo_hd_read_hours"></block>
+ <block type="halo_hd_read_minutes"></block>
+ <block type="halo_hd_read_seconds"></block>
 </category>
