@@ -104,7 +104,7 @@ Blockly.Blocks['halo_hd_read_sound_level'] = {
       .appendField(".readSoundLevel()");
     this.setOutput(true, null);
     this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
-    this.setInputsInline(false);
+    this.setInputsInline(true);
     this.setColour("#02AD4D");
     this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
     this.setHelpUrl("");
@@ -180,7 +180,7 @@ Blockly.Blocks['halo_hd_read_hours'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
       .appendField(".readHours()");
-    this.setOutput(true, "String");
+    this.setOutput(true, null);
     this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
     this.setInputsInline(true);
     this.setColour("#02AD4D");
@@ -194,7 +194,7 @@ Blockly.Blocks['halo_hd_read_minutes'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
       .appendField(".readMinutes()");
-    this.setOutput(true, "String");
+    this.setOutput(true, null);
     this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
     this.setInputsInline(true);
     this.setColour("#02AD4D");
@@ -208,7 +208,7 @@ Blockly.Blocks['halo_hd_read_seconds'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
       .appendField(".readSeconds()");
-    this.setOutput(true, "String");
+    this.setOutput(true, null);
     this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
     this.setInputsInline(true);
     this.setColour("#02AD4D");

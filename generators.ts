@@ -80,17 +80,17 @@ Blockly.Python['halo_hd_set_time'] = function(block) {
 Blockly.Python['halo_hd_read_hours'] = function(block) {
   var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
   var code = variable_halo + '.readHours()\n';
-  return code;
+  return [code, Blockly.Python.ORDER_ATOMIC];
 };
 
 Blockly.Python['halo_hd_read_minutes'] = function(block) {
   var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
   var code = variable_halo + '.readMinutes()\n';
-  return code;
+  return [code, Blockly.Python.ORDER_ATOMIC];
 };
 
 Blockly.Python['halo_hd_read_seconds'] = function(block) {
   var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
   var code = variable_halo + '.readSeconds()\n';
-  return code;
+  return [code, Blockly.Python.ORDER_ATOMIC];
 };
