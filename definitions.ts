@@ -106,7 +106,7 @@ Blockly.Blocks['halo_hd_read_sound_level'] = {
     this.setOutput(true, null);
     this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
     this.setColour("#02AD4D");
-    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setTooltip("Read the sound level from the mic on the Kitronik HaloHD");
     this.setHelpUrl("");
   }
 };
@@ -123,7 +123,7 @@ Blockly.Blocks['halo_hd_play_sound'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setTooltip("Play music on the buzzer on the Kitronik HaloHD");
     this.setHelpUrl("");
   }
 };
@@ -136,7 +136,7 @@ Blockly.Blocks['halo_hd_stop_sound'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setTooltip("Stop music on the buzzer on the Kitronik HaloHD");
     this.setHelpUrl("");
   }
 };
@@ -149,7 +149,7 @@ Blockly.Blocks['halo_hd_read_time'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setTooltip("Update the time value from the RTC on the Kitronik HaloHD");
     this.setHelpUrl("");
   }
 };
@@ -170,7 +170,7 @@ Blockly.Blocks['halo_hd_set_time'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setTooltip("Set the time value of the RTC on the Kitronik HaloHD");
     this.setHelpUrl("");
   }
 };
@@ -184,7 +184,7 @@ Blockly.Blocks['halo_hd_read_hours'] = {
     this.setOutput(true, null);
     this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
     this.setColour("#02AD4D");
-    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setTooltip("Read the hours value from the RTC on the Kitronik HaloHD");
     this.setHelpUrl("");
   }
 };
@@ -198,7 +198,7 @@ Blockly.Blocks['halo_hd_read_minutes'] = {
     this.setOutput(true, null);
     this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
     this.setColour("#02AD4D");
-    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setTooltip("Read the minutes value from the RTC on the Kitronik HaloHD");
     this.setHelpUrl("");
   }
 };
@@ -212,7 +212,7 @@ Blockly.Blocks['halo_hd_read_seconds'] = {
     this.setOutput(true, null);
     this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
     this.setColour("#02AD4D");
-    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setTooltip("Read the seconds value from the RTC on the Kitronik HaloHD");
     this.setHelpUrl("");
   }
 };
