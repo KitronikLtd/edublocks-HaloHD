@@ -45,7 +45,7 @@ Blockly.Python['halo_hd_clear_leds'] = function(block) {
 Blockly.Python['halo_hd_read_sound_level'] = function(block) {
   var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
   var code = variable_halo + '.readSoundLevel()\n';
-  return code;
+  return [code, Blockly.Python.ORDER_ATOMIC];
 };
 
 Blockly.Python['halo_hd_play_sound'] = function(block) {
