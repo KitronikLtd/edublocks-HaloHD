@@ -102,9 +102,9 @@ Blockly.Blocks['halo_hd_read_sound_level'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
       .appendField(".readSoundLevel()");
-    this.setOutput(true, "String");
+    this.setOutput(true, null);
     this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
-    this.setInputsInline(true);
+    this.setInputsInline(false);
     this.setColour("#02AD4D");
     this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
     this.setHelpUrl("");
