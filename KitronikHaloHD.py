@@ -39,9 +39,8 @@ alarmMinute = 0
 setAlarm = False
 
 class HaloHD():
-    def __init___(self):
+    def __init__(self):
         self.pixels = NeoPixel(pin8, LEDS_ON_HALO)
-        self.initRTC()
     
     def setLED(self, ledNumber, colour):
         if ledNumber < 0: ledNumber = 0
