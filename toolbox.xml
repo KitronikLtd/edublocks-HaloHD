@@ -1,7 +1,8 @@
 <category name="HaloHD" colour="#02AD4D" iconclass="blocklyTreeIconCustom robot">
-<label text="HaloHD - ZIP LEDs" web-class="myLabelStyle"></label>
+<label text="HaloHD" web-class="myLabelStyle"></label>
 <block type="import_halo_hd"></block>
 <block type="halo_hd_init"></block>
+<label text="HaloHD - ZIP LEDs" web-class="myLabelStyle"></label>
 <block type="halo_hd_set_led">
     <value name="led_number">
         <shadow type="textinline">
