@@ -27,7 +27,7 @@ Blockly.Blocks['halo_hd_set_led'] = {
   init: function() {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
-      .appendField(".LED[");
+      .appendField(".setLED[");
     this.appendValueInput("led_number")
       .setCheck(null);
     this.appendDummyInput()
@@ -39,7 +39,7 @@ Blockly.Blocks['halo_hd_set_led'] = {
     this.appendValueInput("led_blue")
       .setCheck(null);
     this.appendDummyInput()
-      .appendField(") ");
+      .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -53,7 +53,7 @@ Blockly.Blocks['halo_hd_set_leds'] = {
   init: function() {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
-      .appendField(".LEDs = (");
+      .appendField(".setLEDs = (");
     this.appendValueInput("led_red")
       .setCheck(null);
     this.appendValueInput("led_green")
@@ -61,7 +61,7 @@ Blockly.Blocks['halo_hd_set_leds'] = {
     this.appendValueInput("led_blue")
       .setCheck(null);
     this.appendDummyInput()
-      .appendField(") ");
+      .appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -80,6 +80,19 @@ Blockly.Blocks['halo_hd_show_leds'] = {
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
     this.setTooltip("Update the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_clear_leds'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".clearLEDs()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
     this.setHelpUrl("");
   }
 };

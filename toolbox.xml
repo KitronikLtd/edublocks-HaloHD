@@ -5,41 +5,42 @@
  <block type="halo_hd_set_led">
     <value name="led_number">
         <shadow type="textinline">
-            <field name="text">255</field>
+            <field name="text">0</field>
         </shadow>
     </value>
     <value name="led_red">
         <shadow type="textinline">
-            <field name="text">255</field>
+            <field name="text">64</field>
         </shadow>
     </value>
     <value name="led_green">
         <shadow type="textinline">
-            <field name="text">255</field>
+            <field name="text">64</field>
         </shadow>
     </value>
     <value name="led_blue">
         <shadow type="textinline">
-            <field name="text">255</field>
+            <field name="text">64</field>
         </shadow>
     </value>
  </block>
  <block type="halo_hd_set_leds">
     <value name="led_red">
         <shadow type="textinline">
-            <field name="text">255</field>
+            <field name="text">64</field>
         </shadow>
     </value>
     <value name="led_green">
         <shadow type="textinline">
-            <field name="text">255</field>
+            <field name="text">64</field>
         </shadow>
     </value>
     <value name="led_blue">
         <shadow type="textinline">
-            <field name="text">255</field>
+            <field name="text">64</field>
         </shadow>
     </value>
  </block>  
  <block type="halo_hd_show_leds"></block>
+ <block type="halo_hd_clear_leds"></block>
 </category>

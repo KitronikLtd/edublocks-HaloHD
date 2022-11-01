@@ -54,7 +54,10 @@ class HaloHD():
     
     def showLEDs(self):
         self.pixels.show()
-
+    
+    def clearLEDs(self):
+        self.pixels.clear()
+    
     #reads the RTC chip. THE numbers come back as BCD, 
     #so this function converts them as they come in and places them into the class members
     def readTime(self):

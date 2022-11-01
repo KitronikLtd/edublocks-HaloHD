@@ -35,3 +35,9 @@ Blockly.Python['halo_hd_show_leds'] = function(block) {
   var code = variable_halo + '.showLEDs()\n';
   return code;
 };
+
+Blockly.Python['halo_hd_clear_leds'] = function(block) {
+  var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
+  var code = variable_halo + '.clearLEDs()\n';
+  return code;
+};
