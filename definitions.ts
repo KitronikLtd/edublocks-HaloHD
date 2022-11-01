@@ -1,71 +1,85 @@
-Blockly.Blocks['import_neopixel'] = {
-    init: function() {
-      this.appendDummyInput()
-          .appendField("import neoPixel");
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour("#02AD4D");
-      this.setTooltip("imports neopixel libary");
-      this.setHelpUrl("");
-    }
-};
-Blockly.Blocks['neopixel_init'] = {
-    init: function() {
-      this.appendDummyInput()
-          .appendField(new Blockly.FieldVariable("Pixels"), "Pixels")
-          .appendField(".Create();");
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
-      this.setColour("#02AD4D");
-      this.setTooltip("Initialise : neoPixel");
-      this.setHelpUrl("");
-    }
-};
-Blockly.Blocks['set_led'] = {
+Blockly.Blocks['import_halo_hd'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("Pixels"), "Pixels")
-        .appendField(".");
-    this.appendValueInput("Pixel")
-        .setCheck(null);
+      .appendField("from KitronikHaloHD import *");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Imports Kitronik HaloHD library");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_init'] = {
+  init: function() {
     this.appendDummyInput()
-        .appendField(".")
-        .appendField(new Blockly.FieldDropdown([["red", "red"], ["green", "green"], ["blue", "blue"]]), "Colour") 
-        .appendField(".SetL() ");
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(" = HaloHD()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Initialise Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_set_led'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".LED[");
+    this.appendValueInput("led_number")
+      .setCheck(null);
+    this.appendDummyInput()
+      .appendField("] = (");
+    this.appendValueInput("led_red")
+      .setCheck(null);
+    this.appendValueInput("led_green")
+      .setCheck(null);
+    this.appendValueInput("led_blue")
+      .setCheck(null);
+    this.appendDummyInput()
+      .appendField(") ");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-  this.setTooltip("set (pixel) led (colour)");
-  this.setHelpUrl("");
+    this.setTooltip("Set an LED colour on the Kitronik HaloHD");
+    this.setHelpUrl("");
   }
 };
 
-Blockly.Blocks['set_all_leds'] = {
-    init: function() {
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("Pixels"), "Pixels")
-        .appendField(".")
-        .appendField(new Blockly.FieldDropdown([["red", "red"], ["green", "green"], ["blue", "blue"]]), "Colour")
-        .appendField(" = SetAll()");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour("#02AD4D");
-  this.setTooltip("sets all led (colour)");
-  this.setHelpUrl("");
-  }
-};
-
-Blockly.Blocks['show_leds'] = {
+Blockly.Blocks['halo_hd_set_leds'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldVariable("Pixels"), "Pixels")
-        .appendField(".")
-        .appendField("showLeds()");
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".LEDs = (");
+    this.appendValueInput("led_red")
+      .setCheck(null);
+    this.appendValueInput("led_green")
+      .setCheck(null);
+    this.appendValueInput("led_blue")
+      .setCheck(null);
+    this.appendDummyInput()
+      .appendField(") ");
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour("#02AD4D");
-  this.setTooltip("show the set leds");
-  this.setHelpUrl("");
+    this.setTooltip("Set all the LEDs colour on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_show_leds'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".showLEDs()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Update the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
   }
 };

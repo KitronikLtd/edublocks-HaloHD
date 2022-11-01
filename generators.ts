@@ -1,64 +1,37 @@
-Blockly.Python['import_neopixel'] = function(block) {
-  var code = 'from neopixel import NeoPixel\n';
+Blockly.Python['import_halo_hd'] = function(block) {
+  var code = 'from KitronikHaloHD import *\n';
   return code;
 };
 
-Blockly.Python['neopixel_init'] = function(block) {
-  var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
-  var code = 'from microbit import pin8\n';
-  code += 'LEDS_ON_HALO=60\n';
-  code += variable_led + ' = NeoPixel(pin8, LEDS_ON_HALO)\n';
+Blockly.Python['halo_hd_init'] = function(block) {
+  var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
+  var code = variable_halo + ' = HaloHD()\n';
   return code;
 };
 
-Blockly.Python['set_led'] = function(block) {
-  var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
-  var variable_lednum = Blockly.Python.valueToCode(block, 'Pixel', Blockly.Python.ORDER_ATOMIC);
-  if (variable_lednum < 0)
-  {
-    variable_lednum=0;
-  }
-  else if (variable_lednum > 59)
-  {
-    variable_lednum=59;
-  }
-  var variable_ledcol = block.getFieldValue('Colour');
-  if (variable_ledcol == 'red')
-  {
-    var code = variable_led + '['+variable_lednum+'] = (255, 0, 0)\n';
-  }
-  else if (variable_ledcol == 'green')
-  {
-    var code = variable_led + '['+variable_lednum+'] = (0, 255, 0)\n';
-  }
-  else if (variable_ledcol == 'blue')
-  {
-    var code = variable_led + '['+variable_lednum+'] = (0, 0, 255)\n';
-  }  
+Blockly.Python['halo_hd_set_led'] = function(block) {
+  var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
+  var value_led_number = Blockly.Python.valueToCode(block, 'led_number', Blockly.Python.ORDER_ATOMIC);
+  var value_led_red = Blockly.Python.valueToCode(block, 'led_red', Blockly.Python.ORDER_ATOMIC);
+  var value_led_green = Blockly.Python.valueToCode(block, 'led_green', Blockly.Python.ORDER_ATOMIC);
+  var value_led_blue = Blockly.Python.valueToCode(block, 'led_blue', Blockly.Python.ORDER_ATOMIC);
+  var colour = '(' + value_led_red + ', ' + value_led_green + ', ' + value_led_blue + ')';
+  var code = variable_halo + '.setLED(' + value_led_number + ', ' + colour + ')\n';
   return code;
 };
 
-Blockly.Python['set_all_leds'] = function(block) {
-  var code = "for i in range(60):\n"; 
-  var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
-  var variable_ledcol = block.getFieldValue('Colour');
-  if (variable_ledcol == 'red')
-    {
-      code += '  ' + variable_led + '[i] = (255, 0, 0)\n';
-    }
-    else if (variable_ledcol == 'green')
-    {
-      code += '  ' + variable_led + '[i] = (0, 255, 0)\n';
-    }
-    else if (variable_ledcol == 'blue')
-    {
-      code += '  ' + variable_led + '[i] = (0, 0, 255)\n';
-    }
+Blockly.Python['halo_hd_set_leds'] = function(block) {
+  var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
+  var value_led_red = Blockly.Python.valueToCode(block, 'led_red', Blockly.Python.ORDER_ATOMIC);
+  var value_led_green = Blockly.Python.valueToCode(block, 'led_green', Blockly.Python.ORDER_ATOMIC);
+  var value_led_blue = Blockly.Python.valueToCode(block, 'led_blue', Blockly.Python.ORDER_ATOMIC);
+  var colour = '(' + value_led_red + ', ' + value_led_green + ', ' + value_led_blue + ')';
+  var code = variable_halo + '.setLEDs(' + colour + ')\n';
   return code;
 };
 
-Blockly.Python['show_leds'] = function(block) {
-  var variable_led = Blockly.Python.variableDB_.getName(block.getFieldValue('Pixels'), Blockly.Variables.NAME_TYPE);
-  var code = variable_led + '.show()\n';
+Blockly.Python['halo_hd_show_leds'] = function(block) {
+  var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
+  var code = variable_halo + '.showLEDs()\n';
   return code;
 };

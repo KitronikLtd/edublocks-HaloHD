@@ -1,14 +1,45 @@
 <category name="HaloHD" colour="#02AD4D" iconclass="blocklyTreeIconCustom robot">
 <label text="HaloHD" web-class="myLabelStyle"></label>
- <block type="import_neopixel"></block>
- <block type="neopixel_init"></block>
- <block type="set_led">
-    <value name="Pixel">
+ <block type="import_halo_hd"></block>
+ <block type="halo_hd_init"></block>
+ <block type="halo_hd_set_led">
+    <value name="led_number">
         <shadow type="textinline">
-        <field name="text">255</field>
-    </shadow>
+            <field name="text">255</field>
+        </shadow>
+    </value>
+    <value name="led_red">
+        <shadow type="textinline">
+            <field name="text">255</field>
+        </shadow>
+    </value>
+    <value name="led_green">
+        <shadow type="textinline">
+            <field name="text">255</field>
+        </shadow>
+    </value>
+    <value name="led_blue">
+        <shadow type="textinline">
+            <field name="text">255</field>
+        </shadow>
     </value>
  </block>
- <block type="set_all_leds"></block>  
- <block type="show_leds"></block>
+ <block type="halo_hd_set_leds">
+    <value name="led_red">
+        <shadow type="textinline">
+            <field name="text">255</field>
+        </shadow>
+    </value>
+    <value name="led_green">
+        <shadow type="textinline">
+            <field name="text">255</field>
+        </shadow>
+    </value>
+    <value name="led_blue">
+        <shadow type="textinline">
+            <field name="text">255</field>
+        </shadow>
+    </value>
+ </block>  
+ <block type="halo_hd_show_leds"></block>
 </category>
