@@ -102,8 +102,9 @@ Blockly.Blocks['halo_hd_read_sound_level'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
       .appendField(".readSoundLevel()");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setOutput(true, "String");
+    this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+    this.setInputsInline(true);
     this.setColour("#02AD4D");
     this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
     this.setHelpUrl("");
@@ -179,8 +180,9 @@ Blockly.Blocks['halo_hd_read_hours'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
       .appendField(".readHours()");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setOutput(true, "String");
+    this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+    this.setInputsInline(true);
     this.setColour("#02AD4D");
     this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
     this.setHelpUrl("");
@@ -192,8 +194,9 @@ Blockly.Blocks['halo_hd_read_minutes'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
       .appendField(".readMinutes()");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setOutput(true, "String");
+    this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+    this.setInputsInline(true);
     this.setColour("#02AD4D");
     this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
     this.setHelpUrl("");
@@ -205,8 +208,9 @@ Blockly.Blocks['halo_hd_read_seconds'] = {
     this.appendDummyInput()
       .appendField(new Blockly.FieldVariable("halo"), "halo")
       .appendField(".readSeconds()");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setOutput(true, "String");
+    this.setOutputShape(Blockly.OUTPUT_SHAPE_ROUND);
+    this.setInputsInline(true);
     this.setColour("#02AD4D");
     this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
     this.setHelpUrl("");

@@ -48,9 +48,7 @@
 <block type="halo_hd_read_sound_level"></block>
 <block type="halo_hd_play_sound">
     <value name="buzzer_sound">
-        <shadow type="textinline">
-            <field name="text">music.BA_DING</field>
-        </shadow>
+        <block type="audio_options"></block>
     </value>
 </block>
 <block type="halo_hd_stop_sound"></block>
