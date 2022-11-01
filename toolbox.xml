@@ -1,8 +1,8 @@
 <category name="HaloHD" colour="#02AD4D" iconclass="blocklyTreeIconCustom robot">
-<label text="HaloHD" web-class="myLabelStyle"></label>
- <block type="import_halo_hd"></block>
- <block type="halo_hd_init"></block>
- <block type="halo_hd_set_led">
+<label text="HaloHD - ZIP LEDs" web-class="myLabelStyle"></label>
+<block type="import_halo_hd"></block>
+<block type="halo_hd_init"></block>
+<block type="halo_hd_set_led">
     <value name="led_number">
         <shadow type="textinline">
             <field name="text">0</field>
@@ -23,8 +23,8 @@
             <field name="text">64</field>
         </shadow>
     </value>
- </block>
- <block type="halo_hd_set_leds">
+</block>
+<block type="halo_hd_set_leds">
     <value name="led_red">
         <shadow type="textinline">
             <field name="text">64</field>
@@ -40,11 +40,12 @@
             <field name="text">64</field>
         </shadow>
     </value>
- </block>  
- <block type="halo_hd_show_leds"></block>
- <block type="halo_hd_clear_leds"></block>
- <block type="halo_hd_read_time"></block>
- <block type="halo_hd_set_time">
+</block>  
+<block type="halo_hd_show_leds"></block>
+<block type="halo_hd_clear_leds"></block>
+<label text="HaloHD - Real Time Clock" web-class="myLabelStyle"></label>
+<block type="halo_hd_read_time"></block>
+<block type="halo_hd_set_time">
     <value name="time_hours">
         <shadow type="textinline">
             <field name="text">12</field>
@@ -60,8 +61,8 @@
             <field name="text">30</field>
         </shadow>
     </value>
- </block>
- <block type="halo_hd_read_hours"></block>
- <block type="halo_hd_read_minutes"></block>
- <block type="halo_hd_read_seconds"></block>
+</block>
+<block type="halo_hd_read_hours"></block>
+<block type="halo_hd_read_minutes"></block>
+<block type="halo_hd_read_seconds"></block>
 </category>
