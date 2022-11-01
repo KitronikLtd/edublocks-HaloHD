@@ -42,6 +42,25 @@ Blockly.Python['halo_hd_clear_leds'] = function(block) {
   return code;
 };
 
+Blockly.Python['halo_hd_read_sound_level'] = function(block) {
+  var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
+  var code = variable_halo + '.readSoundLevel()\n';
+  return code;
+};
+
+Blockly.Python['halo_hd_play_sound'] = function(block) {
+  var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
+  var value_buzzer_sound = Blockly.Python.valueToCode(block, 'buzzer_sound', Blockly.Python.ORDER_ATOMIC);
+  var code = variable_halo + '.playSound(' + value_buzzer_sound + ')\n';
+  return code;
+};
+
+Blockly.Python['halo_hd_stop_sound'] = function(block) {
+  var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
+  var code = variable_halo + '.stopSound()\n';
+  return code;
+};
+
 Blockly.Python['halo_hd_read_time'] = function(block) {
   var variable_halo = Blockly.Python.variableDB_.getName(block.getFieldValue('halo'), Blockly.Variables.NAME_TYPE);
   var code = variable_halo + '.readTime()\n';

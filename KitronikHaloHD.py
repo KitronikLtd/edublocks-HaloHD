@@ -27,16 +27,9 @@ from microbit import pin14 #buzzer
 from microbit import pin19 #I2C
 from microbit import pin20 #I2C
 from neopixel import NeoPixel
+import music
 
-# Declare constants
 LEDS_ON_HALO = 60
-#SOUND_LEVEL_BASE is the average voltage level of the microphone at 1.65V converted to bytes
-SOUND_LEVEL_BASE = 530
-
-#globals for the alarm function
-alarmHour =0
-alarmMinute = 0
-setAlarm = False
 
 class HaloHD():
     def __init__(self):
@@ -57,6 +50,15 @@ class HaloHD():
     
     def clearLEDs(self):
         self.pixels.clear()
+    
+    def readSoundLevel(self):
+        return pin0.read_analog()
+    
+    def playSound(self, sound):
+        music.play(sound, pin14, True, False)
+
+    def stopSound(self):
+        music.stop(pin14)
     
     #reads the RTC chip. THE numbers come back as BCD, 
     #so this function converts them as they come in and places them into the class members

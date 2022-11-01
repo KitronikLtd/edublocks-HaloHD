@@ -44,6 +44,16 @@
 </block>  
 <block type="halo_hd_show_leds"></block>
 <block type="halo_hd_clear_leds"></block>
+<label text="HaloHD - Sounds" web-class="myLabelStyle"></label>
+<block type="halo_hd_read_sound_level"></block>
+<block type="halo_hd_play_sound">
+    <value name="buzzer_sound">
+        <shadow type="textinline">
+            <field name="text">music.BA_DING</field>
+        </shadow>
+    </value>
+</block>
+<block type="halo_hd_stop_sound"></block>
 <label text="HaloHD - Real Time Clock" web-class="myLabelStyle"></label>
 <block type="halo_hd_read_time"></block>
 <block type="halo_hd_set_time">
@@ -54,12 +64,12 @@
     </value>
     <value name="time_minutes">
         <shadow type="textinline">
-            <field name="text">15</field>
+            <field name="text">30</field>
         </shadow>
     </value>
     <value name="time_seconds">
         <shadow type="textinline">
-            <field name="text">30</field>
+            <field name="text">59</field>
         </shadow>
     </value>
 </block>

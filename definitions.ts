@@ -97,6 +97,49 @@ Blockly.Blocks['halo_hd_clear_leds'] = {
   }
 };
 
+Blockly.Blocks['halo_hd_read_sound_level'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".readSoundLevel()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_play_sound'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".playSound(");
+    this.appendValueInput("buzzer_sound")
+      .setCheck(null);
+    this.appendDummyInput()
+      .appendField(")");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['halo_hd_stop_sound'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField(new Blockly.FieldVariable("halo"), "halo")
+      .appendField(".stopSound()");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour("#02AD4D");
+    this.setTooltip("Clear the LEDs colours on the Kitronik HaloHD");
+    this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['halo_hd_read_time'] = {
   init: function() {
     this.appendDummyInput()
